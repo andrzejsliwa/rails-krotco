@@ -11,6 +11,7 @@ gem 'compass', '>= 0.10.4'
 gem 'rails3-generators'
 gem 'haml-rails'
 gem 'httparty'
+gem "jquery-rails"
 
 group :development, :test do
   gem 'rspec-rails', '>= 2.1.0'
@@ -19,10 +20,10 @@ group :development, :test do
   gem 'autotest', '>= 4.4.2'
   gem 'autotest-rails', '>= 4.1.0'
   gem 'factory_girl', :git => 'git://github.com/thoughtbot/factory_girl.git'
-  if RUBY_PLATFORM =~ /darwin/
-    gem 'autotest-growl', '>= 0.2.6'
-    gem 'autotest-fsevent', '>= 0.2.3'
-  end
+  # if RUBY_PLATFORM =~ /darwin/
+  #   gem 'autotest-growl', '>= 0.2.6'
+  #   gem 'autotest-fsevent', '>= 0.2.3'
+  # end
 end
 
 group :cucumber do
