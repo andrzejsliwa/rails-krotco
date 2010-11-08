@@ -6,25 +6,29 @@ gem 'rails', '3.0.1'
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
 gem 'pg'
+gem 'haml', '>= 3.0.16'
+gem 'compass', '>= 0.10.4'
+gem 'rails3-generators'
+gem 'haml-rails'
+gem 'httparty'
 
-# Use unicorn as the web server
-# gem 'unicorn'
+group :development, :test do
+  gem 'rspec-rails', '>= 2.1.0'
+  gem 'hpricot'
+  gem 'rspec_hpricot_matchers', '>= 1.0'
+  gem 'autotest', '>= 4.4.2'
+  gem 'autotest-rails', '>= 4.1.0'
+  gem 'factory_girl', :git => 'git://github.com/thoughtbot/factory_girl.git'
+  if RUBY_PLATFORM =~ /darwin/
+    gem 'autotest-growl', '>= 0.2.6'
+    gem 'autotest-fsevent', '>= 0.2.3'
+  end
+end
 
-# Deploy with Capistrano
-# gem 'capistrano'
-
-# To use debugger
-# gem 'ruby-debug'
-
-# Bundle the extra gems:
-# gem 'bj'
-# gem 'nokogiri'
-# gem 'sqlite3-ruby', :require => 'sqlite3'
-# gem 'aws-s3', :require => 'aws/s3'
-
-# Bundle gems for the local environment. Make sure to
-# put test-only gems in this group so their generators
-# and rake tasks are available in development mode:
-# group :development, :test do
-#   gem 'webrat'
-# end
+group :cucumber do
+  gem 'database_cleaner', '>= 0.5.2'
+  gem 'rspec-rails', '>= 2.1.0'
+  gem 'capybara', '>= 0.4.0'
+  gem 'cucumber', '>= 0.8.5'
+  gem 'cucumber-rails', '>= 0.3.2'
+end
