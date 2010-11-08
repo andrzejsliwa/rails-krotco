@@ -149,6 +149,8 @@ PLATFORMS
 
 DEPENDENCIES
   autotest (>= 4.4.2)
+  autotest-fsevent (>= 0.2.3)
+  autotest-growl (>= 0.2.6)
   autotest-rails (>= 4.1.0)
   capybara (>= 0.4.0)
   compass (>= 0.10.4)
